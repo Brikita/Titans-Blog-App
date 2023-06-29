@@ -2,4 +2,4 @@
 
 
 # NOTE
-## Create your own Branch and name it your name. 
+## Please create your own Branch and give it your name. 

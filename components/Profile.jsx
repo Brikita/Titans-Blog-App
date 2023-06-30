@@ -1,10 +1,12 @@
 import React from "react"
 import Details from "./Details"
-import Profile from "./Header"
+import Header from "./Header"
 
 export default function Profile() {
-    <div>
-        <Header />
-        <Details />
-    </div>
+    return (
+        <div>
+            <Header />
+            <Details />
+        </div>
+    )
 }

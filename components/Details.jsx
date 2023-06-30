@@ -1,10 +1,14 @@
 import React from "react"
 
 export default function Details() {
-    <div>
-        <img src="" alt="" />
-        <h2>Patrick</h2>
-        <p>Description</p>
-        <button>Edit Profile</button>
-    </div>
+    return (
+        <div className="profile">
+            <div className="image-name">
+                <img src="../images/blank-profile-picture-973460_1280.webp" className="profile--image"/>
+                <h2 className="profile--name">Patrick</h2>
+            </div>
+            <p className="profile--description">Description...</p>
+            <button className="profile-edit-button">Edit Profile</button>
+        </div>
+    )
 }

@@ -5,5 +5,45 @@
 }
 
 body {
-    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page--title {
+    background-color: #0c243c;
+    height: 50px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.profile {
+    background: #55c2c3;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.profile--image {
+    border-radius: 50%;
+    height: 70px;
+    margin-right: 7px;
+    width: 70px;
+}
+
+.image-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile--description {
+    margin-bottom: 0.5rem;
+}
+
+.profile-edit-button {
+    background-color: #7e8c9c;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 100px;
 }

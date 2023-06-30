@@ -40,7 +40,7 @@ export default function Profile() {
             <div>
         <Header />
         <Details 
-        nameInput={
+        nameInput = {
             editing ? (
                 <h2 className="profile-name">{profile.profileName}</h2>
             ) : (
@@ -54,7 +54,7 @@ export default function Profile() {
                 ></input>
             )
         }
-        descriptionInput={
+        descriptionInput = {
             editing ? (
                 <p className="profile--paragraph">{profile.description}</p>
             ) : (

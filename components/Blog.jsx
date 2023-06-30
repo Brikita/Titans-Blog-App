@@ -10,18 +10,28 @@ export default function Blog(props) {
         time: "",
         tags: []
     } */
+
+    
     
 
 
     
     return (
-        <div className='blog-container'>
-            <fieldset>
-                <legend>Write a new blog</legend>
-                <textarea type="text" className='blog-input' placeholder='Write your Blog here' name='content' onChange={props.changeContent} value={blog[0].content}/>
+        <div>
+            <div className='blog-container'>
+            
+                <fieldset>
+                    
+                    <legend>Write a new blog</legend>
+                    <textarea type="text" className='blog-input' placeholder='Write your Blog here' name='content' onChange={props.changeContent} value={props.currentBlog.content} />
 
-                <button className='blog-post-btn'>Post Blog</button>
-            </fieldset>
+                    <button className='blog-post-btn' onClick={props.post}> Post Blog </button>
+                </fieldset>
+            </div>
+            <div>
+                {if}
+
+            </div>
         </div>
     )
 }

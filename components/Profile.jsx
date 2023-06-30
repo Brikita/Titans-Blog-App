@@ -1,28 +1,39 @@
-import React from 'react';
+import React from 'react'
 import Blog from "./Blog"
+import {nanoid} from 'nanoid'
 
 
 export default function Profile(){
+
+    
     const [blog, setBlog] = React.useState(
-        JSON.parse(localStorage.getItem("blogData")) || [] );
+        JSON.parse(localStorage.getItem("blog")) || [newBlog]
+        );
+    
+
+    /* const [currentBlogId, setCurrentBlogId] = React.useState(
+        (blog[0] && blog[0].id) || ""
+    ) */
     React.useEffect(() => {
-        localStorage.setItem("blogData", JSON.stringify(blog))
+        //window.addEventListener('load', newBlog())
+        localStorage.setItem("blog", JSON.stringify(blog))
         
 
     }, [blog])
 
     function newBlog() {
-        const blogItem = {
+        return ({
             id: "",
             content: "",
             author: "",
             coverImg: "",
             time: "",
             tags: []
-        }
-      setBlog(prevBlog => [blogItem, ...prevBlog])  
+        })
+      
     }
-    
+    /* setBlog(prevBlog => [blogItem, ...prevBlog])
+      setCurrentBlogId(blogItem.id)  */
     //const [blogContent, setBlogContent] = React.useState(JSON.parse(localStorage.getItem("blogData")) || {newBlog})
 
     
@@ -31,12 +42,26 @@ export default function Profile(){
     
 
     function changeContent(event) {
-        const {value, name} = event.target
+        const { value } = event.target
         setBlog(prevBlog => prevBlog.map(blogItem => {
-            return {...prevBlog, content: value}
+            return {...blogItem, content: value}
         }))
+
+        console.log(value)
         
-        console.log(blog.content)
+        
+        
+    }
+
+    function findBlog() {
+        return blog.find(note => {
+            return note
+        }) 
+    }
+
+
+    function post() {
+        
     }
 
 
@@ -46,8 +71,10 @@ export default function Profile(){
     return (
         <div>
             <Blog 
-                createBlog = {newBlog}
+                createBlog={newBlog}
                 changeContent={changeContent}
+                currentBlog={findBlog()}
+                post={post}
             />
         </div>
     )

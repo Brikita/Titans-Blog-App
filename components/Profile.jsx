@@ -1,13 +1,13 @@
 import React from 'react'
 import Blog from "./Blog"
-import {nanoid} from 'nanoid'
+
 
 
 export default function Profile(){
-
+    const resultDiv = document.getElementById("blog-post")
     
     const [blog, setBlog] = React.useState(
-        JSON.parse(localStorage.getItem("blog")) || [newBlog]
+        JSON.parse(localStorage.getItem("blog")) || []
         );
     
 
@@ -47,7 +47,7 @@ export default function Profile(){
             return {...blogItem, content: value}
         }))
 
-        console.log(value)
+        //console.log(value)
         
         
         
@@ -61,8 +61,14 @@ export default function Profile(){
 
 
     function post() {
+        const postedBlog = blog.map(prevBlog => prevBlog);
+      
+        const blogContent = postedBlog[0].content
         
-    }
+        resultDiv.textContent = blogContent
+        
+        
+      }
 
 
     

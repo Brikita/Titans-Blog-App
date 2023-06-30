@@ -8,9 +8,9 @@ export default function Blog() {
         <div className='blog-container'>
             <fieldset>
                 <legend>Write a new blog</legend>
-                <input type="text" className='blog-input' placeholder='Write your Blog here' name='content'/>
+                <textarea type="text" className='blog-input' placeholder='Write your Blog here' name='content'/>
 
-                <button className='blog-post-btn'>Post</button>
+                <button className='blog-post-btn'>Post Blog</button>
             </fieldset>
         </div>
     )

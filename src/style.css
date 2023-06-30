@@ -10,6 +10,7 @@ body {
 
 .page--title {
     background-color: #0c243c;
+    color: #7e8c9c;
     height: 50px;
     padding: 10px 0;
     text-align: center;
@@ -36,14 +37,30 @@ body {
     margin-bottom: 1rem;
 }
 
+.bio--title {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 .profile--description {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile--paragraph {
+    margin-block: 10px;
 }
 
 .profile-edit-button {
     background-color: #7e8c9c;
     border: none;
     border-radius: 5px;
+    color: #0c243c;
+    font-size: large;
     height: 25px;
+    padding: 3px;
     width: 100px;
+}
+
+.profile-edit-button:active {
+    box-shadow: inset 0 0 2px 3px rgb(83, 80, 80);
 }
